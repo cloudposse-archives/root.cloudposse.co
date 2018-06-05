@@ -8,7 +8,9 @@ module "identity" {
   source = "git::git@github.com:cloudposse/terraform-aws-account-metadata.git?ref=add-account-ids"
 }
 
-variable "aws_assume_role_arn" {}
+variable "aws_assume_role_arn" {
+  type = "string"
+}
 
 provider "aws" {
   assume_role {

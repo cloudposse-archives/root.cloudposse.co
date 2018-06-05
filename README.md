@@ -29,14 +29,14 @@ __NOTE:__ You need to only do this once.
 
 Create IAM Access Key ID and Secret Access Key on AWS `root` account and setup MFA.
 
-Configure AWS profile in `~/.aws/config`. Make sure to change `username@cloudposse.com` to your own IAM username.
+Configure AWS profile in `~/.aws/config`. Make sure to change `username@cloudposse.co` to your own IAM username.
 
 ```bash
-[profile cp-root-admin]
+[profile cpco-root-admin]
 region=us-west-2
-role_arn=arn:aws:iam::XXXXXXXXXx:role/cp-root-admin
-mfa_serial=arn:aws:iam::XXXXXXXXX:mfa/username@cloudposse.com
-source_profile=cloudposse
+role_arn=arn:aws:iam::XXXXXXXXXx:role/cpco-root-admin
+mfa_serial=arn:aws:iam::XXXXXXXXX:mfa/username@cloudposse.co
+source_profile=cpco
 ```
 
 ### Install and setup aws-vault
@@ -58,7 +58,7 @@ Then setup your secret credentials in `aws-vault` (input the IAM Access Key ID a
 
 ```bash
 export AWS_VAULT_BACKEND=file
-aws-vault add cloudposse
+aws-vault add cpco
 ```
 
 __NOTE:__ You should set `AWS_VAULT_BACKEND=file` in your shell rc config (e.g. `~/.bashrc`) so it persists.
