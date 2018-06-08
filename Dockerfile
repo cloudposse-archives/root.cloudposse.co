@@ -24,12 +24,14 @@ ENV TF_VAR_region="us-west-2"
 ENV TF_VAR_namespace="cpco"
 ENV TF_VAR_stage="root"
 ENV TF_VAR_parent_domain_name="cloudposse.co"
-ENV TF_VAR_domain_name="root.cloudposse.co"
+ENV TF_VAR_root_domain_name="root.cloudposse.co"
+
 ENV TF_VAR_prod_account_email="info+prod@cloudposse.co"
 ENV TF_VAR_staging_account_email="info+staging@cloudposse.co"
 ENV TF_VAR_audit_account_email="info+audit@cloudposse.co"
 ENV TF_VAR_dev_account_email="info+dev@cloudposse.co"
 ENV TF_VAR_testing_account_email="info+testing@cloudposse.co"
+
 ENV TF_VAR_account_id="323330167063"
 ENV TF_VAR_root_account_admin_user_names='["admin@cloudposse.co"]'
 ENV TF_VAR_root_account_readonly_user_names='[]'
@@ -43,6 +45,7 @@ ENV TF_VAR_dev_account_id=""
 ENV TF_VAR_dev_account_user_names='["admin@cloudposse.co"]'
 ENV TF_VAR_testing_account_id=""
 ENV TF_VAR_testing_account_user_names='["admin@cloudposse.co"]'
+
 ENV TF_VAR_prod_name_servers='["", "", "", ""]'
 ENV TF_VAR_staging_name_servers='["", "", "", ""]'
 ENV TF_VAR_audit_name_servers='["", "", "", ""]'
