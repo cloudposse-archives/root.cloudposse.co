@@ -35,8 +35,8 @@ Configure AWS profile in `~/.aws/config`. Make sure to change `username@cloudpos
 ```bash
 [profile cpco-root-admin]
 region=us-west-2
-role_arn=arn:aws:iam::XXXXXXXXXx:role/cpco-root-admin
-mfa_serial=arn:aws:iam::XXXXXXXXX:mfa/username@cloudposse.co
+role_arn=arn:aws:iam::323330167063:role/ops
+mfa_serial=arn:aws:iam::323330167063:mfa/admin@cloudposse.co
 source_profile=cpco
 ```
 

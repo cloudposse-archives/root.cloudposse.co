@@ -1,9 +1,9 @@
-FROM cloudposse/terraform-root-modules:0.3.1 as terraform-root-modules
+FROM cloudposse/terraform-root-modules:0.3.2 as terraform-root-modules
 
 FROM cloudposse/geodesic:0.9.18
 
-ENV DOCKER_IMAGE "cloudposse/root.cloudposse.co"
-ENV DOCKER_TAG "latest"
+ENV DOCKER_IMAGE="cloudposse/root.cloudposse.co"
+ENV DOCKER_TAG="latest"
 
 ENV BANNER="root.cloudposse.co"
 
@@ -29,6 +29,7 @@ ENV TF_VAR_prod_account_email="info+prod@cloudposse.co"
 ENV TF_VAR_staging_account_email="info+staging@cloudposse.co"
 ENV TF_VAR_audit_account_email="info+audit@cloudposse.co"
 ENV TF_VAR_dev_account_email="info+dev@cloudposse.co"
+ENV TF_VAR_testing_account_email="info+testing@cloudposse.co"
 ENV TF_VAR_account_id="323330167063"
 ENV TF_VAR_root_account_admin_user_names='["admin@cloudposse.co"]'
 ENV TF_VAR_root_account_readonly_user_names='[]'
@@ -40,10 +41,13 @@ ENV TF_VAR_audit_account_id=""
 ENV TF_VAR_audit_account_user_names='["admin@cloudposse.co"]'
 ENV TF_VAR_dev_account_id=""
 ENV TF_VAR_dev_account_user_names='["admin@cloudposse.co"]'
+ENV TF_VAR_testing_account_id=""
+ENV TF_VAR_testing_account_user_names='["admin@cloudposse.co"]'
 ENV TF_VAR_prod_name_servers='["", "", "", ""]'
 ENV TF_VAR_staging_name_servers='["", "", "", ""]'
 ENV TF_VAR_audit_name_servers='["", "", "", ""]'
 ENV TF_VAR_dev_name_servers='["", "", "", ""]'
+ENV TF_VAR_testing_name_servers='["", "", "", ""]'
 ENV TF_VAR_local_name_servers='["", "", "", ""]'
 
 
