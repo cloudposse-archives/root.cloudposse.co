@@ -1,4 +1,4 @@
-FROM r.cfcr.io/cloudposse/terraform-root-modules:0.3.1 as terraform-root-modules
+FROM cloudposse/terraform-root-modules:0.3.1 as terraform-root-modules
 
 FROM cloudposse/geodesic:0.9.18
 
