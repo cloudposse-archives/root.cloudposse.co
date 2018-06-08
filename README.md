@@ -1,4 +1,5 @@
 # root.cloudposse.co
+
 Terraform Infrastructure for Cloud Posse Parent ("Root") Organization in AWS.
 
 __NOTE:__ You need to provision the Root Organization first before creating the Production, Staging, and Development infrastructure as it creates `dns` and `iam` resources needed for all sub accounts.
