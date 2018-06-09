@@ -55,9 +55,8 @@ ENV TF_VAR_prod_name_servers='["", "", "", ""]'
 ENV TF_VAR_staging_name_servers='["", "", "", ""]'
 ENV TF_VAR_audit_name_servers='["", "", "", ""]'
 ENV TF_VAR_dev_name_servers='["", "", "", ""]'
-ENV TF_VAR_testing_name_servers='["", "", "", ""]'
+ENV TF_VAR_testing_name_servers='["ns-312.awsdns-39.com", "ns-1416.awsdns-49.org", "ns-619.awsdns-13.net", "ns-1794.awsdns-32.co.uk"]'
 ENV TF_VAR_local_name_servers='["", "", "", ""]'
-
 
 # chamber KMS config
 ENV CHAMBER_KMS_KEY_ALIAS="alias/cpco-root-chamber"
