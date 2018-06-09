@@ -1,4 +1,4 @@
-FROM cloudposse/terraform-root-modules:0.3.2 as terraform-root-modules
+FROM cloudposse/terraform-root-modules:0.3.3 as terraform-root-modules
 
 FROM cloudposse/geodesic:0.9.18
 
@@ -20,6 +20,7 @@ ENV TF_DYNAMODB_TABLE="cpco-root-terraform-state-lock"
 
 # Terraform vars
 # https://www.terraform.io/docs/configuration/variables.html
+ENV TF_VAR_account_id="323330167063"
 ENV TF_VAR_region="us-west-2"
 ENV TF_VAR_namespace="cpco"
 ENV TF_VAR_stage="root"
@@ -32,7 +33,6 @@ ENV TF_VAR_audit_account_email="info+audit@cloudposse.co"
 ENV TF_VAR_dev_account_email="info+dev@cloudposse.co"
 ENV TF_VAR_testing_account_email="info+testing@cloudposse.co"
 
-ENV TF_VAR_account_id="323330167063"
 ENV TF_VAR_root_account_admin_user_names='["admin@cloudposse.co"]'
 ENV TF_VAR_root_account_readonly_user_names='[]'
 
@@ -57,9 +57,6 @@ ENV TF_VAR_audit_name_servers='["", "", "", ""]'
 ENV TF_VAR_dev_name_servers='["", "", "", ""]'
 ENV TF_VAR_testing_name_servers='["ns-312.awsdns-39.com", "ns-1416.awsdns-49.org", "ns-619.awsdns-13.net", "ns-1794.awsdns-32.co.uk"]'
 ENV TF_VAR_local_name_servers='["", "", "", ""]'
-
-# chamber KMS config
-ENV CHAMBER_KMS_KEY_ALIAS="alias/cpco-root-chamber"
 
 # Copy root modules
 COPY --from=terraform-root-modules /aws/tfstate-backend/ /conf/tfstate-backend/
