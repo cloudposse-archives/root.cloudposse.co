@@ -5,23 +5,15 @@ FROM cloudposse/geodesic:0.9.18
 ENV DOCKER_IMAGE="cloudposse/root.cloudposse.co"
 ENV DOCKER_TAG="latest"
 
+# Geodesic banner
 ENV BANNER="root.cloudposse.co"
-
-# Default AWS Profile name
-ENV AWS_DEFAULT_PROFILE="cpco-root-admin"
 
 # AWS Region
 ENV AWS_REGION="us-west-2"
 
-# Terraform State Bucket
-ENV TF_BUCKET="cpco-root-terraform-state"
-ENV TF_BUCKET_REGION="us-west-2"
-ENV TF_DYNAMODB_TABLE="cpco-root-terraform-state-lock"
-
 # Terraform vars
-# https://www.terraform.io/docs/configuration/variables.html
+ENV TF_VAR_region=""${AWS_REGION}"
 ENV TF_VAR_account_id="323330167063"
-ENV TF_VAR_region="us-west-2"
 ENV TF_VAR_namespace="cpco"
 ENV TF_VAR_stage="root"
 ENV TF_VAR_parent_domain_name="cloudposse.co"
@@ -57,6 +49,14 @@ ENV TF_VAR_audit_name_servers='["", "", "", ""]'
 ENV TF_VAR_dev_name_servers='["", "", "", ""]'
 ENV TF_VAR_testing_name_servers='["ns-312.awsdns-39.com", "ns-1416.awsdns-49.org", "ns-619.awsdns-13.net", "ns-1794.awsdns-32.co.uk"]'
 ENV TF_VAR_local_name_servers='["", "", "", ""]'
+
+# Terraform state bucket and DynamoDB table for state locking
+ENV TF_BUCKET_REGION="${AWS_REGION}"
+ENV TF_BUCKET="${TF_VAR_namespace}-${TF_VAR_stage}-terraform-state"
+ENV TF_DYNAMODB_TABLE="${TF_VAR_namespace}-${TF_VAR_stage}-terraform-state-lock"
+
+# Default AWS Profile name
+ENV AWS_DEFAULT_PROFILE="${TF_VAR_namespace}-${TF_VAR_stage}-admin"
 
 # Copy root modules
 COPY --from=terraform-root-modules /aws/tfstate-backend/ /conf/tfstate-backend/
