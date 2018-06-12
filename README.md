@@ -30,7 +30,7 @@ __NOTE:__ You need to only do this once.
 
 Create IAM Access Key ID and Secret Access Key on AWS `root` account and setup MFA.
 
-Configure AWS profile in `~/.aws/config`. Make sure to change `username@cloudposse.co` to your own IAM username.
+Configure AWS profile in `~/.aws/config`. Make sure to change `admin@cloudposse.co` to your own IAM username.
 
 ```bash
 [profile cpco-root-admin]
