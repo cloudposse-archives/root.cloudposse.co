@@ -12,7 +12,7 @@ ENV BANNER="root.cloudposse.co"
 ENV AWS_REGION="us-west-2"
 
 # Terraform vars
-ENV TF_VAR_region=""${AWS_REGION}"
+ENV TF_VAR_region="${AWS_REGION}"
 ENV TF_VAR_account_id="323330167063"
 ENV TF_VAR_namespace="cpco"
 ENV TF_VAR_stage="root"
