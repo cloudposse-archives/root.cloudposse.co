@@ -64,7 +64,7 @@ aws-vault add cpco
 
 __NOTE:__ You should set `AWS_VAULT_BACKEND=file` in your shell rc config (e.g. `~/.bashrc`) so it persists.
 
-For more info, see [aws-vault](https://docs.cloudposse.com/docs/aws-vault)
+For more info, see [aws-vault](https://docs.cloudposse.com/tools/aws-vault)
 
 
 ### Build Docker Image
@@ -125,7 +125,7 @@ Uncomment `assume_role` block in `iam/main.tf`.
 assume-role
 ```
 
-For more info, see [geodesic-with-terraform](https://docs.cloudposse.com/v0.9.0/docs/geodesic-with-terraform)
+For more info, see [geodesic-with-terraform](https://docs.cloudposse.com/geodesic/module/with-terraform)
 
 
 ### Provision `dns` with Terraform
