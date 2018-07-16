@@ -2,12 +2,12 @@
 
 [![Cloud Posse](https://cloudposse.com/logo-300x69.svg)](https://cloudposse.com)
 
-# audit.cloudposse.co [![Codefresh Build Status](https://g.codefresh.io/api/badges/build?repoOwner=cloudposse&repoName=audit.cloudposse.co&branch=master&pipelineName=audit.cloudposse.co&accountName=cloudposse&type=cf-1)](https://g.codefresh.io/pipelines/audit.cloudposse.co/builds) [![Latest Release](https://img.shields.io/github/release/cloudposse/audit.cloudposse.co.svg)](https://github.com/cloudposse/audit.cloudposse.co/releases) [![Slack Community](https://slack.cloudposse.com/badge.svg)](https://slack.cloudposse.com)
+# root.cloudposse.co [![Codefresh Build Status](https://g.codefresh.io/api/badges/build?repoOwner=cloudposse&repoName=root.cloudposse.co&branch=master&pipelineName=root.cloudposse.co&accountName=cloudposse&type=cf-1)](https://g.codefresh.io/pipelines/root.cloudposse.co/builds) [![Latest Release](https://img.shields.io/github/release/cloudposse/root.cloudposse.co.svg)](https://github.com/cloudposse/root.cloudposse.co/releases) [![Slack Community](https://slack.cloudposse.com/badge.svg)](https://slack.cloudposse.com)
 
 
 Terraform Infrastructure for Cloud Posse Parent ("Root") Organization in AWS.
 
-__NOTE:__ You need to provision the Root Organization first before creating the [Audit](https://github.com/cloudposse/audit.cloudposse.co), [Production](https://github.com/cloudposse/prod.cloudposse.co), [Staging](https://github.com/cloudposse/staging.cloudposse.co), [Development](https://github.com/cloudposse/dev.cloudposse.co) and [Testing](https://github.com/cloudposse/testing.cloudposse.co) infrastructure as it creates `dns` and `iam` resources needed for all sub accounts.
+__NOTE:__ You need to provision the Root Organization first before creating the [Audit](https://github.com/cloudposse/root.cloudposse.co), [Production](https://github.com/cloudposse/prod.cloudposse.co), [Staging](https://github.com/cloudposse/staging.cloudposse.co), [Development](https://github.com/cloudposse/dev.cloudposse.co) and [Testing](https://github.com/cloudposse/testing.cloudposse.co) infrastructure as it creates `dns` and `iam` resources needed for all sub accounts.
 
 ## Introduction
 
@@ -15,7 +15,7 @@ We use [geodesic](https://github.com/cloudposse/geodesic) to define and build wo
 
 `geodesic` exposes many tools that can be used to define and provision AWS and Kubernetes resources.
 
-Here is the list of tools we use to provision the `audit.cloudposse.co` infrastructure:
+Here is the list of tools we use to provision the `root.cloudposse.co` infrastructure:
 
 * [aws-vault](https://github.com/99designs/aws-vault)
 * [chamber](https://github.com/segmentio/chamber)
@@ -215,7 +215,7 @@ For additional context, refer to some of these links.
 
 **Got a question?**
 
-File a GitHub [issue](https://github.com/cloudposse/audit.cloudposse.co/issues), send us an [email][email] or join our [Slack Community][slack].
+File a GitHub [issue](https://github.com/cloudposse/root.cloudposse.co/issues), send us an [email][email] or join our [Slack Community][slack].
 
 ## Commerical Support
 
@@ -242,7 +242,7 @@ Get access to our [Open Source Community Forum][slack] on Slack. It's **FREE** t
 
 ### Bug Reports & Feature Requests
 
-Please use the [issue tracker](https://github.com/cloudposse/audit.cloudposse.co/issues) to report any bugs or file feature requests.
+Please use the [issue tracker](https://github.com/cloudposse/root.cloudposse.co/issues) to report any bugs or file feature requests.
 
 ### Developing
 
