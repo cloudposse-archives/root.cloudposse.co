@@ -9,18 +9,6 @@ Terraform Infrastructure for Cloud Posse Parent ("Root") Organization in AWS.
 
 __NOTE:__ You need to provision the Root Organization first before creating the [Audit](https://github.com/cloudposse/root.cloudposse.co), [Production](https://github.com/cloudposse/prod.cloudposse.co), [Staging](https://github.com/cloudposse/staging.cloudposse.co), [Development](https://github.com/cloudposse/dev.cloudposse.co) and [Testing](https://github.com/cloudposse/testing.cloudposse.co) infrastructure as it creates `dns` and `iam` resources needed for all sub accounts.
 
-## Introduction
-
-We use [geodesic](https://github.com/cloudposse/geodesic) to define and build world-class cloud infrastructures backed by AWS and powered by Kubernetes.
-
-`geodesic` exposes many tools that can be used to define and provision AWS and Kubernetes resources.
-
-Here is the list of tools we use to provision the `root.cloudposse.co` infrastructure:
-
-* [aws-vault](https://github.com/99designs/aws-vault)
-* [chamber](https://github.com/segmentio/chamber)
-* [terraform](https://www.terraform.io/)
-
 
 ---
 
@@ -36,6 +24,18 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 
 
+
+## Introduction
+
+We use [geodesic](https://github.com/cloudposse/geodesic) to define and build world-class cloud infrastructures backed by AWS and powered by Kubernetes.
+
+`geodesic` exposes many tools that can be used to define and provision AWS and Kubernetes resources.
+
+Here is the list of tools we use to provision the `root.cloudposse.co` infrastructure:
+
+* [aws-vault](https://github.com/99designs/aws-vault)
+* [chamber](https://github.com/segmentio/chamber)
+* [terraform](https://www.terraform.io/)
 
 
 ## Quick Start
@@ -195,7 +195,6 @@ Check out these related projects.
 - [Packages](https://github.com/cloudposse/packages) - Cloud Posse installer and distribution of native apps
 - [Build Harness](https://github.com/cloudposse/dev) - Collection of Makefiles to facilitate building Golang projects, Dockerfiles, Helm charts, and more
 - [terraform-root-modules](https://github.com/cloudposse/terraform-root-modules) - Collection of Terraform "root module" invocations for provisioning reference architectures
-- [root.cloudposse.co](https://github.com/cloudposse/root.cloudposse.co) - Example Terraform Reference Architecture of a Geodesic Module for a Parent ("Root") Organization in AWS.
 - [audit.cloudposse.co](https://github.com/cloudposse/audit.cloudposse.co) - Example Terraform Reference Architecture of a Geodesic Module for an Audit Logs Organization in AWS.
 - [prod.cloudposse.co](https://github.com/cloudposse/prod.cloudposse.co) - Example Terraform Reference Architecture of a Geodesic Module for a Production Organization in AWS.
 - [staging.cloudposse.co](https://github.com/cloudposse/staging.cloudposse.co) - Example Terraform Reference Architecture of a Geodesic Module for a Staging Organization in AWS.

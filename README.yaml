@@ -23,8 +23,7 @@ description: |-
 
   __NOTE:__ You need to provision the Root Organization first before creating the [Audit](https://github.com/cloudposse/root.cloudposse.co), [Production](https://github.com/cloudposse/prod.cloudposse.co), [Staging](https://github.com/cloudposse/staging.cloudposse.co), [Development](https://github.com/cloudposse/dev.cloudposse.co) and [Testing](https://github.com/cloudposse/testing.cloudposse.co) infrastructure as it creates `dns` and `iam` resources needed for all sub accounts.
   
-  ## Introduction
-
+introduction: |-
   We use [geodesic](https://github.com/cloudposse/geodesic) to define and build world-class cloud infrastructures backed by AWS and powered by Kubernetes.
 
   `geodesic` exposes many tools that can be used to define and provision AWS and Kubernetes resources.
@@ -179,10 +178,6 @@ related:
   - name: "terraform-root-modules"
     description: "Collection of Terraform \"root module\" invocations for provisioning reference architectures"
     url: "https://github.com/cloudposse/terraform-root-modules"
-
-  - name: "root.cloudposse.co"
-    description: "Example Terraform Reference Architecture of a Geodesic Module for a Parent (\"Root\") Organization in AWS."
-    url: "https://github.com/cloudposse/root.cloudposse.co"
 
   - name: "audit.cloudposse.co"
     description: "Example Terraform Reference Architecture of a Geodesic Module for an Audit Logs Organization in AWS."
