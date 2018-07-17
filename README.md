@@ -50,8 +50,8 @@ Configure AWS profile in `~/.aws/config`. Make sure to change username (username
 ```bash
 [profile cpco-root-admin]
 region=us-west-2
-role_arn=arn:aws:iam::590638247571:role/OrganizationAccountAccessRole
-mfa_serial=arn:aws:iam::681280261279:mfa/username@cloudposse.com
+role_arn=arn:aws:iam::323330167063:role/OrganizationAccountAccessRole
+mfa_serial=arn:aws:iam::323330167063:mfa/username@cloudposse.com
 source_profile=cpco
 ```
 
