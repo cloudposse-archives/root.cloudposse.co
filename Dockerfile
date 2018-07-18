@@ -42,7 +42,7 @@ ENV TF_VAR_audit_name_servers='["", "", "", ""]'
 ENV TF_VAR_dev_account_email="info+dev@cloudposse.co"
 ENV TF_VAR_dev_account_id="838456590850"
 ENV TF_VAR_dev_account_user_names='["admin@cloudposse.co"]'
-ENV TF_VAR_dev_name_servers='["", "", "", ""]'
+ENV TF_VAR_dev_name_servers='["ns-112.awsdns-14.com", "ns-1485.awsdns-57.org", "ns-1655.awsdns-14.co.uk", "ns-613.awsdns-12.net"]'
 
 ENV TF_VAR_testing_account_email="info+testing@cloudposse.co"
 ENV TF_VAR_testing_account_id="126450723953"
