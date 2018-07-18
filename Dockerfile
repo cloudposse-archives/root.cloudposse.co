@@ -27,7 +27,7 @@ ENV TF_VAR_root_account_readonly_user_names='[]'
 ENV TF_VAR_prod_account_email="info+prod@cloudposse.co"
 ENV TF_VAR_prod_account_id="845778104613"
 ENV TF_VAR_prod_account_user_names='["admin@cloudposse.co"]'
-ENV TF_VAR_prod_name_servers='["", "", "", ""]'
+ENV TF_VAR_prod_name_servers='["ns-1105.awsdns-10.org", "ns-1801.awsdns-33.co.uk", "ns-414.awsdns-51.com", "ns-835.awsdns-40.net"]'
 
 ENV TF_VAR_staging_account_email="info+staging@cloudposse.co"
 ENV TF_VAR_staging_account_id="781281608584"
