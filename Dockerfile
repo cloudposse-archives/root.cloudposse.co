@@ -1,4 +1,4 @@
-FROM cloudposse/terraform-root-modules:0.4.5 as terraform-root-modules
+FROM cloudposse/terraform-root-modules:0.4.7 as terraform-root-modules
 
 FROM cloudposse/geodesic:0.11.6
 
@@ -25,17 +25,17 @@ ENV TF_VAR_root_account_admin_user_names='["admin@cloudposse.co"]'
 ENV TF_VAR_root_account_readonly_user_names='[]'
 
 ENV TF_VAR_prod_account_email="info+prod@cloudposse.co"
-ENV TF_VAR_prod_account_id=""
+ENV TF_VAR_prod_account_id="845778104613"
 ENV TF_VAR_prod_account_user_names='["admin@cloudposse.co"]'
 ENV TF_VAR_prod_name_servers='["", "", "", ""]'
 
 ENV TF_VAR_staging_account_email="info+staging@cloudposse.co"
-ENV TF_VAR_staging_account_id=""
+ENV TF_VAR_staging_account_id="781281608584"
 ENV TF_VAR_staging_account_user_names='["admin@cloudposse.co"]'
 ENV TF_VAR_staging_name_servers='["", "", "", ""]'
 
 ENV TF_VAR_audit_account_email="info+audit@cloudposse.co"
-ENV TF_VAR_audit_account_id=""
+ENV TF_VAR_audit_account_id="205035139483"
 ENV TF_VAR_audit_account_user_names='["admin@cloudposse.co"]'
 ENV TF_VAR_audit_name_servers='["", "", "", ""]'
 

@@ -49,7 +49,7 @@ quickstart: |-
   ```bash
   [profile cpco-root-admin]
   region=us-west-2
-  role_arn=arn:aws:iam::323330167063:role/OrganizationAccountAccessRole
+  role_arn=arn:aws:iam::323330167063:role/cpco-root-admin
   mfa_serial=arn:aws:iam::323330167063:mfa/username@cloudposse.com
   source_profile=cpco
   ```
