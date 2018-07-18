@@ -37,7 +37,7 @@ ENV TF_VAR_staging_name_servers='["ns-1029.awsdns-00.org", "ns-1798.awsdns-32.co
 ENV TF_VAR_audit_account_email="info+audit@cloudposse.co"
 ENV TF_VAR_audit_account_id="205035139483"
 ENV TF_VAR_audit_account_user_names='["admin@cloudposse.co"]'
-ENV TF_VAR_audit_name_servers='["", "", "", ""]'
+ENV TF_VAR_audit_name_servers='["ns-1343.awsdns-39.org", "ns-2001.awsdns-58.co.uk", "ns-330.awsdns-41.com", "ns-881.awsdns-46.net"]'
 
 ENV TF_VAR_dev_account_email="info+dev@cloudposse.co"
 ENV TF_VAR_dev_account_id="838456590850"
