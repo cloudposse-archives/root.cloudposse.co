@@ -194,7 +194,14 @@ related:
   - name: "dev.cloudposse.co"
     description: "Example Terraform Reference Architecture of a Geodesic Module for a Development Sandbox Organization in AWS."
     url: "https://github.com/cloudposse/dev.cloudposse.co"
- 
+
+  - name: "testing.cloudposse.co"
+    description: "Example Terraform Reference Architecture that implements a Geodesic Module for an Automated Testing Organization in AWS"
+    url: "https://github.com/cloudposse/testing.cloudposse.co"
+
+  - name: "geodesic"
+    description: "🚀 Geodesic is the fastest way to get up and running with a rock solid, production grade cloud platform built on strictly Open Source tools. "
+    url: "https://github.com/cloudposse/geodesic"
 
 references:
   - name: "Cloud Posse Documentation"
