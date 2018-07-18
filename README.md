@@ -199,6 +199,8 @@ Check out these related projects.
 - [prod.cloudposse.co](https://github.com/cloudposse/prod.cloudposse.co) - Example Terraform Reference Architecture of a Geodesic Module for a Production Organization in AWS.
 - [staging.cloudposse.co](https://github.com/cloudposse/staging.cloudposse.co) - Example Terraform Reference Architecture of a Geodesic Module for a Staging Organization in AWS.
 - [dev.cloudposse.co](https://github.com/cloudposse/dev.cloudposse.co) - Example Terraform Reference Architecture of a Geodesic Module for a Development Sandbox Organization in AWS.
+- [testing.cloudposse.co](https://github.com/cloudposse/testing.cloudposse.co) - Example Terraform Reference Architecture that implements a Geodesic Module for an Automated Testing Organization in AWS
+- [geodesic](https://github.com/cloudposse/geodesic) - 🚀 Geodesic is the fastest way to get up and running with a rock solid, production grade cloud platform built on strictly Open Source tools. 
 
 
 
