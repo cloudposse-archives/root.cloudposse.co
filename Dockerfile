@@ -1,6 +1,6 @@
 FROM cloudposse/terraform-root-modules:0.5.3 as terraform-root-modules
 
-FROM cloudposse/geodesic:0.16.0
+FROM cloudposse/geodesic:0.21.0
 
 ENV DOCKER_IMAGE="cloudposse/root.cloudposse.co"
 ENV DOCKER_TAG="latest"
