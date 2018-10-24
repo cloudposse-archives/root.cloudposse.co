@@ -26,7 +26,7 @@ terragrunt = {
       ]
 
       env_vars = {
-        TF_VAR_assume_role_arn   = "${get_env("TF_VAR_assume_role_arn", "atlantis")}"
+        TF_VAR_aws_assume_role_arn = "${get_env("TF_VAR_aws_assume_role_arn", "atlantis")}"
       }
     }
   }
