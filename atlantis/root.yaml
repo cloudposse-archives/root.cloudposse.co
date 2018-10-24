@@ -1,0 +1,40 @@
+version: 2
+
+projects:
+
+- name: "atlantis-repos"
+  workflow: "make"
+  dir: "conf/atlantis-repos"
+  workspace: "default"
+  terraform_version: "v0.11.10"
+  autoplan:
+    when_modified:
+      - "*.tf"
+      - "*.tfvars"
+    enabled: true
+  apply_requirements:
+    - "approved"
+
+- name: "users"
+  workflow: "make"
+  dir: "conf/users"
+  workspace: "default"
+  terraform_version: "v0.11.10"
+  autoplan:
+    when_modified:
+      - "*.tf"
+      - "*.tfvars"
+    enabled: true
+  apply_requirements:
+    - "approved"
+
+
+workflows:
+  # Make workflow
+  make:
+    plan:
+      steps:
+      - run: "make plan"
+    apply:
+      steps:
+      - run: "make apply"

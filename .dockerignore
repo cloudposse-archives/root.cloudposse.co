@@ -13,6 +13,9 @@
 .idea
 *.iml
 
+# Terragrunt
+**/.terragrunt-cache
+
 # Build Harness
 .build-harness
 build-harness/
