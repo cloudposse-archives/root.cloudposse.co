@@ -5,12 +5,7 @@ terragrunt = {
   terraform {
     source = "git::https://github.com/cloudposse/terraform-root-modules.git//aws/users?ref=0.6.0"
     extra_arguments "smtp" {
-      commands = [
-        "apply",
-        "plan",
-	"destroy",
-      ]
-
+      commands = ["plan", "apply", "destroy"]
       env_vars = {
         TF_VAR_smtp_username = "${get_env("SMTP_USERNAME", "")}"            
         TF_VAR_smtp_password = "${get_env("SMTP_PASSWORD", "")}" 
