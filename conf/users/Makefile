@@ -3,16 +3,16 @@ PLANFILE ?= terraform.tfplan
 init:
 	@[ -d .terragrunt-cache ] || terragrunt init -no-color
 
-plan:
+plan: init
 	chamber exec mailgun -- terragrunt $@ -out $(PLANFILE)
 
-apply:
+apply: init
 	chamber exec mailgun -- terragrunt $@ -auto-approve=true $(PLANFILE)
 
-destroy:
+destroy: init
 	chamber exec mailgun -- terragrunt $@ -auto-approve=true
 
-force-unlock:
+force-unlock: init
 	terragrunt $@ -force $(LOCK_ID)
 
 clean:
