@@ -15,7 +15,8 @@ git submodule add --tag 0.1.0 https://github.com/cloudposse/geodesic-aws-atlanti
 ### Update a module
 
 ```
-git -C atlantis checkout 0.2.0
+git config -f .gitmodules submodule.conf/atlantis.branch 0.1.1
+git submodule update --checkout
 ```
 
 ### Remove a module
