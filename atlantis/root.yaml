@@ -9,8 +9,8 @@ projects:
   terraform_version: "v0.11.10"
   autoplan:
     when_modified:
-      - "conf/atlantis-repos/*.tf"
-      - "conf/atlantis-repos/*.tfvars"
+      - "*.tf"
+      - "*.tfvars"
     enabled: true
   apply_requirements:
     - "approved"
@@ -22,8 +22,8 @@ projects:
   terraform_version: "v0.11.10"
   autoplan:
     when_modified:
-      - "conf/users/*.tf"
-      - "conf/users/*.tfvars"
+      - "*.tf"
+      - "*.tfvars"
     enabled: true
   apply_requirements:
     - "approved"
@@ -38,4 +38,3 @@ workflows:
     apply:
       steps:
       - run: "make apply"
-
