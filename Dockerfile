@@ -67,6 +67,9 @@ COPY --from=terraform-root-modules /aws/cloudtrail/ /conf/cloudtrail/
 # Place configuration in 'conf/' directory
 COPY conf/ /conf/
 
+# Install configuration dependencies
+RUN make -C /conf install
+
 # Filesystem entry for tfstate
 RUN s3 fstab '${TF_BUCKET}' '/' '/secrets/tf'
 
