@@ -1,4 +1,8 @@
 terragrunt = {
+  include {
+    path = "${find_in_parent_folders()}"
+  }
+
   terraform {
     source = "git::https://github.com/cloudposse/terraform-github-repository-webhooks.git//?ref=tags/0.1.0"
 
@@ -19,19 +23,6 @@ terragrunt = {
         TF_VAR_github_token   = "${get_env("GITHUB_TOKEN", "")}"
         TF_VAR_webhook_secret = "${get_env("ATLANTIS_GH_WEBHOOK_SECRET", "")}"
       }
-    }
-
-  }
-
-  remote_state {
-    backend = "s3"
-
-    config {
-      bucket         = "${get_env("TF_BUCKET", "")}"
-      key            = "${path_relative_to_include()}/${get_env("TF_FILE", "terraform.tfstate")}"
-      region         = "${get_env("TF_BUCKET_REGION", "us-east-1")}"
-      encrypt        = true
-      dynamodb_table = "${get_env("TF_DYNAMODB_TABLE", "")}"
     }
   }
 }
