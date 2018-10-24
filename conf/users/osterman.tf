@@ -2,7 +2,7 @@ module "osterman" {
   source  = "git::https://github.com/cloudposse/terraform-aws-iam-user.git?ref=0.1.0"
   name    = "osterman"
   pgp_key = "keybase:osterman"
-  groups  = "${local.admin_group}"
+  groups  = "${local.admin_groups}"
 }
 
 module "osterman_welcome" {
