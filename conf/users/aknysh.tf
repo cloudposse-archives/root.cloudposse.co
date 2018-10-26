@@ -6,6 +6,6 @@ module "aknysh" {
   force_destroy = "true"
 }
 
-output "osterman_decrypt_command" {
+output "aknysh_decrypt_command" {
   value = "${module.aknysh.keybase_password_decrypt_command}"
 }
