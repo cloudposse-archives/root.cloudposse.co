@@ -27,7 +27,6 @@ terragrunt = {
 
       env_vars = {
         TF_VAR_aws_assume_role_arn = "${get_env("TF_VAR_aws_assume_role_arn", "arn:aws:iam::323330167063:role/atlantis")}"
-        AWS_DEFAULT_REGION         = "us-west-2"
       }
     }
   }
