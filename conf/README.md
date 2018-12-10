@@ -9,7 +9,7 @@ git submodule init
 ### Add a module
 
 ```
-git submodule add --tag 0.1.0 https://github.com/cloudposse/geodesic-aws-atlantis.git atlantis
+git submodule add https://github.com/cloudposse/geodesic-aws-atlantis.git atlantis
 ```
 
 ### Update a module
