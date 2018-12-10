@@ -1,5 +1,11 @@
 ## Submodules
 
+
+### change from geodessic base to conf/
+```
+cd conf/
+```
+
 ### Init
 
 ```
