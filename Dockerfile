@@ -15,6 +15,7 @@ ENV AWS_DEFAULT_REGION="${AWS_REGION}"
 # Terraform vars
 ENV TF_VAR_region="${AWS_REGION}"
 ENV TF_VAR_account_id="323330167063"
+ENV TF_VAR_aws_assume_role_arn="arn:aws:iam::${TF_VAR_account_id}:role/atlantis"
 ENV TF_VAR_namespace="cpco"
 ENV TF_VAR_stage="root"
 
