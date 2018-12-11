@@ -32,4 +32,5 @@ testing_account_user_names = [
   "vadzim@cloudposse.com",
   "aliaksandr@cloudposse.com",
   "josh",
+  "solairerove"
 ]
