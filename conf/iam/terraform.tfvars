@@ -26,6 +26,8 @@ dev_account_user_names = [
   "erik@cloudposse.com",
   "vadzim@cloudposse.com",
   "aliaksandr@cloudposse.com",
+  "solairerove",
+  "josh"
 ]
 
 testing_account_user_names = [
