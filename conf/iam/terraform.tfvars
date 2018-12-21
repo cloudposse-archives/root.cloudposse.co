@@ -1,3 +1,5 @@
+accounts_enabled = ["dev", "staging", "prod", "testing", "audit"]
+
 prod_account_user_names = [
   "admin@cloudposse.co",
   "erik@cloudposse.com",
@@ -24,6 +26,8 @@ dev_account_user_names = [
   "erik@cloudposse.com",
   "vadzim@cloudposse.com",
   "aliaksandr@cloudposse.com",
+  "solairerove",
+  "josh"
 ]
 
 testing_account_user_names = [
