@@ -1,4 +1,4 @@
-FROM cloudposse/terraform-root-modules:0.11.0 as terraform-root-modules
+FROM cloudposse/terraform-root-modules:0.47.0 as terraform-root-modules
 
 FROM cloudposse/geodesic:0.46.0
 
@@ -43,6 +43,7 @@ COPY --from=terraform-root-modules /aws/account-settings/ /conf/account-settings
 COPY --from=terraform-root-modules /aws/root-iam/ /conf/root-iam/
 COPY --from=terraform-root-modules /aws/iam/ /conf/iam/
 COPY --from=terraform-root-modules /aws/cloudtrail/ /conf/cloudtrail/
+COPY --from=terraform-root-modules /aws/kops-iam-users/ /conf/kops-iam-users/
 
 # Place configuration in 'conf/' directory
 COPY conf/ /conf/
