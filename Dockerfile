@@ -8,7 +8,7 @@ ENV DOCKER_TAG="latest"
 # General
 ENV NAMESPACE="cpco"
 ENV STAGE="root"
-ENV DOMAIN_NAME="testing.cloudposse.co"
+ENV DOMAIN_NAME="root.cloudposse.co"
 ENV ZONE_ID="Z3SO0TKDDQ0RGG"
 
 # Geodesic banner
