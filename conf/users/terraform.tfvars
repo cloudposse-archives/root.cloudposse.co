@@ -3,7 +3,7 @@ terragrunt = {
     path = "${find_in_parent_folders()}"
   }
   terraform {
-    source = "git::https://github.com/cloudposse/terraform-root-modules.git//aws/users?ref=0.6.0"
+    source = "git::https://github.com/cloudposse/terraform-root-modules.git//aws/users?ref=0.43.0"
     extra_arguments "smtp" {
       commands = ["plan", "apply", "destroy"]
       env_vars = {
