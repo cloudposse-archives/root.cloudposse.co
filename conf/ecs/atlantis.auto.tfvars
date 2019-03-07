@@ -1,6 +1,7 @@
 atlantis_enabled = "true"
 
-atlantis_branch = "master"
+#atlantis_branch = "master"
+atlantis_branch = "ecs_atlantis"
 
 atlantis_repo_name = "root.cloudposse.co"
 
