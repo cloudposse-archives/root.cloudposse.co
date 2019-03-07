@@ -1,2 +1,2 @@
-smtp_host = "smtp.maigun.org"
+smtp_host = "smtp.mailgun.org"
 smtp_port = "587"

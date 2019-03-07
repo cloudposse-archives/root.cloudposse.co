@@ -5,7 +5,7 @@ To add new users, add them to this directory.
 
 Add new users by adding a `.tf` file in this directory for their configuration.
 
-For a user with an email of `user@example.co`, their configuratino would look like this:
+For a user with an email of `user@example.co`, their configuration would look like this:
 
 ```
 module "user_example_co" {
