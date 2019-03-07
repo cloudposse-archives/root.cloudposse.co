@@ -26,6 +26,7 @@ projects:
     when_modified:
       - "Makefile*"
       - "*.tf"
+      - "overrides/*.tf"
       - "*.tfvars"
       - ".envrc"
     enabled: true
