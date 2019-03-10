@@ -7,5 +7,5 @@ module "scaledemo" {
 }
 
 output "scaledemo_decrypt_command" {
-  value = "${module.deliberatetypo.keybase_password_decrypt_command}"
+  value = "${module.scaledemo.keybase_password_decrypt_command}"
 }
