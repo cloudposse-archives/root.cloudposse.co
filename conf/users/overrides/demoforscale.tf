@@ -7,5 +7,5 @@ module "demo" {
 }
 
 output "demo_decrypt_command" {
-  value = "${module.demon.keybase_password_decrypt_command}"
+  value = "${module.demo.keybase_password_decrypt_command}"
 }
