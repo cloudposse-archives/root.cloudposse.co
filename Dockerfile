@@ -10,7 +10,7 @@ ENV NAMESPACE="cpco"
 ENV STAGE="root"
 
 # Geodesic banner
-ENV BANNER="root.cloudposse.co"
+ENV BANNER="cloudposse"
 
 # Message of the Day
 ENV MOTD_URL="https://geodesic.sh/motd"
