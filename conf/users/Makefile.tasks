@@ -1,6 +1,6 @@
 ## Fetch the remote terraform module
 deps:
-	printenv | grep /home
+	env | grep /home
 	terraform init
 	cp overrides/*.tf .
 	terraform init -from-module=
