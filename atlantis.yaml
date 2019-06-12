@@ -2,36 +2,35 @@ version: 2
 
 projects:
 
-- name: "cloudtrail"
-  workflow: "make"
-  dir: "conf/cloudtrail"
-  workspace: "default"
-  terraform_version: "v0.11.10"
-  autoplan:
-    when_modified:
-      - "Makefile*"
-      - "*.tf"
-      - "*.tfvars"
-      - ".envrc"
-    enabled: true
-  apply_requirements:
-    - "approved"
+  - name: "cloudtrail"
+    workflow: "make"
+    dir: "conf/cloudtrail"
+    workspace: "default"
+    terraform_version: "v0.11.10"
+    autoplan:
+      when_modified:
+        - "Makefile*"
+        - "*.tf"
+        - "*.tfvars"
+        - ".envrc"
+      enabled: true
+    apply_requirements:
+      - "approved"
 
-- name: "users"
-  workflow: "make"
-  dir: "conf/users"
-  workspace: "default"
-  terraform_version: "v0.11.10"
-  autoplan:
-    when_modified:
-      - "Makefile*"
-      - "*.tf"
-      - "overrides/*.tf"
-      - "*.tfvars"
-      - ".envrc"
-    enabled: true
-  apply_requirements:
-    - "approved"
+  - name: "users"
+    workflow: "make"
+    dir: "conf/users"
+    workspace: "default"
+    terraform_version: "v0.11.10"
+    autoplan:
+      when_modified:
+        - "Makefile*"
+        - "*.tf"
+        - "*.tfvars"
+        - ".envrc"
+      enabled: true
+    apply_requirements:
+      - "approved"
 
 workflows:
   make:

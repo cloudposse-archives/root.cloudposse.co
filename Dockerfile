@@ -1,6 +1,6 @@
-FROM cloudposse/terraform-root-modules:0.11.0 as terraform-root-modules
+FROM cloudposse/terraform-root-modules:0.87.0 as terraform-root-modules
 
-FROM cloudposse/geodesic:0.72.2
+FROM cloudposse/geodesic:0.114.0
 
 ENV DOCKER_IMAGE="cloudposse/root.cloudposse.co"
 ENV DOCKER_TAG="latest"
@@ -22,6 +22,7 @@ ENV AWS_ACCOUNT_ID="323330167063"
 ENV AWS_ROOT_ACCOUNT_ID="${AWS_ACCOUNT_ID}"
 
 # Terraform state bucket and DynamoDB table for state locking
+ENV TF_BUCKET_PREFIX_FORMAT="basename-pwd"
 ENV TF_BUCKET_REGION="${AWS_REGION}"
 ENV TF_BUCKET="${NAMESPACE}-${STAGE}-terraform-state"
 ENV TF_DYNAMODB_TABLE="${NAMESPACE}-${STAGE}-terraform-state-lock"
@@ -41,6 +42,13 @@ COPY --from=terraform-root-modules /aws/account-settings/ /conf/account-settings
 COPY --from=terraform-root-modules /aws/root-iam/ /conf/root-iam/
 COPY --from=terraform-root-modules /aws/iam/ /conf/iam/
 
+# Default AWS Profile name
+ENV AWS_DEFAULT_PROFILE="${NAMESPACE}-${STAGE}-admin"
+ENV AWS_MFA_PROFILE="${NAMESPACE}-root-admin"
+
+# Install terraform 0.11 for backwards compatibility
+RUN apk add terraform_0.11@cloudposse terraform_0.12@cloudposse terraform@cloudposse==0.11.14-r0
+
 # Place configuration in 'conf/' directory
 COPY conf/ /conf/
 
@@ -51,7 +59,7 @@ RUN make -C /conf install
 RUN s3 fstab '${TF_BUCKET}' '/' '/secrets/tf'
 
 # Install atlantis
-RUN curl -fsSL -o /usr/bin/atlantis https://github.com/cloudposse/atlantis/releases/download/0.5.2/atlantis_linux_amd64 && \
+RUN curl -fsSL -o /usr/bin/atlantis https://github.com/cloudposse/atlantis/releases/download/0.8.0/atlantis_linux_amd64 && \
     chmod 755 /usr/bin/atlantis
 
 WORKDIR /conf/
